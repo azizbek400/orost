@@ -1,0 +1,76 @@
+.header {
+    padding: 20px 0px;
+    background-color: #fff
+}
+.header__container {
+   @include flexB;
+}
+
+.header__list {
+    display: flex;
+    gap: 40px;
+
+}
+
+.header__link {
+    color: #282B22;
+font-size: 16px;
+font-weight: 500;
+line-height: 100%;
+}
+
+.header__phone {
+    color: #3D4A39;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+
+&::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+    background-image: url('../img/phone.png');
+}
+}
+
+.header__btn_block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+} 
+
+.header__menu {
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-image: url('../img/menu.svg');
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    display: none;
+    }
+
+@media screen and (max-width: 1000px) {
+    .header__nav {
+        display: none;
+    }
+    .header__menu {
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 578px) {
+    .header__phone {
+        display: none;
+    }
+
+    .header__logo {
+        max-width: 100px;
+    }
+}
